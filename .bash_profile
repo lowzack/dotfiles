@@ -25,11 +25,3 @@ alias gs='git status'
 alias la='ls -la'
 alias ll='ls -l'
 alias parrot='~/Documents/terminal-parrot'
-
-export LDFLAGS='-L/usr/local/opt/openssl/lib -L/usr/local/opt/readline/lib'
-export CPPFLAGS='-I/usr/local/opt/openssl/include -I/usr/local/opt/readline/include'
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-source ~/.profile
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

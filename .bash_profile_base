@@ -1,5 +1,5 @@
 function parse_git_branch () {
-       git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+       git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
 
 export CLICOLOR=1
@@ -8,15 +8,21 @@ RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
 NO_COLOUR="\[\033[0m\]"
-PS1="$GREEN\u$RED:\w$YELLOW\$(parse_git_branch)$NO_COLOUR\ 🌽 "
+PS1="$GREEN\u$RED:\w$YELLOW (\$(parse_git_branch))$NO_COLOUR 🌽  "
 
 alias gb='git branch'
 alias gd='git diff'
 alias gdc='git diff --cached'
+alias gop='cd ~/Projects'
 alias gr='git remote -v'
+alias gpob="git push origin $(parse_git_branch)"
+alias grom='git pull --rebase origin master'
+alias grum='git pull --rebase upstream master'
 alias gs='git status'
 alias grom='git pull --rebase origin master'
 alias grum='git pull --rebase upstream master'
 alias gop='cd ~/Projects'
 alias la='ls -la'
 alias ll='ls -l'
+alias parrot='~/Documents/terminal-parrot'
+alias c='clear'

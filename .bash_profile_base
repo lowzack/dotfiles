@@ -8,7 +8,7 @@ RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
 NO_COLOUR="\[\033[0m\]"
-PS1="$GREEN\u$RED:\w$YELLOW (\$(parse_git_branch))$NO_COLOUR 🌽  "
+PS1="$GREEN\u$RED:\w$YELLOW 🌳\$(parse_git_branch)🌳 $NO_COLOUR 🌽  "
 
 alias gb='git branch'
 alias gd='git diff'

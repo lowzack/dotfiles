@@ -11,13 +11,13 @@ NO_COLOUR="\[\033[0m\]"
 PS1="$GREEN\u$RED:\w$YELLOW 🌳\$(parse_git_branch)🌳 $NO_COLOUR 🌽  "
 
 alias gb='git branch'
+alias gc='git commit'
+alias gca='git commit --amend'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gop='cd ~/Projects'
 alias gr='git remote -v'
 alias gpob="git push origin \$(parse_git_branch)"
-alias grom='git pull --rebase origin master'
-alias grum='git pull --rebase upstream master'
 alias gs='git status'
 alias grom='git pull --rebase origin master'
 alias grum='git pull --rebase upstream master'

@@ -1,3 +1,4 @@
+alias mainBranch='git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@''
 alias ga='git add'
 alias gb='git branch'
 alias gcob='git checkout -b '
@@ -7,9 +8,9 @@ alias gd='git diff'
 alias gdc='git diff --cached'
 alias gop='cd ~/Projects'
 alias gr='git remote -v'
-alias gpob="git push origin \$(parse_git_branch)"
+alias gpob="git push origin \$(git branch --show-current)"
 alias gs='git status'
-alias grom='git pull --rebase origin master'
+alias grom="git pull --rebase origin \$(mainBranch)"
 alias grum='git pull --rebase upstream master'
 alias la='ls -la'
 alias ll='ls -l'

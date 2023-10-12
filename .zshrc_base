@@ -10,25 +10,25 @@ autoload -U +X compinit; compinit
 # Zinit setup for OMZ
 setopt promptsubst
 
-zinit wait lucid for \
+zinit lucid for \
         OMZL::git.zsh \
   atload"unalias grv" \
         OMZP::git
 
-PS1=" ⏳ >" # provide a simple prompt till the theme loads
+# PS1=" ⏳ >" # provide a simple prompt till the theme loads
 
-zinit wait'!' lucid for \
+zinit lucid for \
     OMZL::prompt_info_functions.zsh \
     OMZT::gnzh
 
-zinit wait lucid for \
+zinit lucid for \
   atinit"zicompinit; zicdreplay"  \
         zdharma-continuum/fast-syntax-highlighting \
       OMZP::colored-man-pages
 
 export NVM_COMPLETION=true
 export NVM_SYMLINK_CURRENT="true"
-zinit wait lucid light-mode for lukechilds/zsh-nvm
+zinit lucid light-mode for lukechilds/zsh-nvm
 
 # Setup Aliases
 source ${HOME}/Projects/dotfiles/aliases.sh;
